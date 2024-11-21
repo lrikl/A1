@@ -1,0 +1,982 @@
+:root {
+
+    --rz-black: #000;
+    --rz-white: #fff;
+    --rz-grad: linear-gradient(270deg, rgba(151,174,255,1) 0%, rgba(203,167,255,1) 20%, rgba(222,165,255,1) 30%, rgba(243,162,255,1) 40%, rgba(255,160,255,1) 45%, rgba(255,160,247,1) 50%, rgba(252,164,185,1) 100%);
+
+    --rz-clamp32-96: clamp(24px, 8vw, 96px);
+
+    --rz-clamp24-80: clamp(24px, 6vw, 80px);
+    --rz-clamp24-56: clamp(24px, 5vw, 56px);
+    --rz-clamp24-48: clamp(24px, 4vw, 48px);
+    --rz-clamp24-40: clamp(24px, 3vw, 40px);
+    --rz-clamp24-32: clamp(24px, 2.5vw, 32px);
+
+    --rz-clamp16-56: clamp(16px, 5vw, 56px);
+    --rz-clamp16-48: clamp(16px, 4vw, 48px);
+    --rz-clamp16-40: clamp(16px, 3vw, 40px);
+    --rz-clamp16-32: clamp(16px, 2.5vw, 32px);
+    --rz-clamp16-24: clamp(16px, 2vw, 24px);
+
+    --rz-clamp8-24: clamp(8px, 2.5vw, 24px);
+    --rz-clamp8-16: clamp(8px, 2vw, 16px);
+
+
+}
+
+.rz-container-rich * {
+    box-sizing: border-box;
+}
+
+.rz-container-rich {
+    color-scheme: only light;
+
+    max-width: 1536px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+
+    font-size: clamp(14px, 2vw, 20px);
+    line-height: 1.2;
+    font-family: Rozetka, Arial, Helvetica, FreeSans, "Liberation Sans", "Nimbus Sans L", sans-serif;
+
+    color: var(--rz-black);
+    background: var(--rz-white);
+
+    text-wrap: pretty;
+}
+
+.rz-wrap-img img,
+.rz-wrap-video video {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.rz-d-img3, .rz-e-mobil {
+    display: none;
+}
+
+.rz-m-b-8 {
+    margin-bottom: 8px;
+}
+.rz-m-b-16{
+    margin-bottom: var(--rz-clamp8-16);
+}
+.rz-m-b-24{
+    margin-bottom: var(--rz-clamp16-24);
+}
+.rz-m-b-32{
+    margin-bottom: var(--rz-clamp16-32);
+}
+.rz-m-b-40{
+    margin-bottom: var(--rz-clamp16-40);
+}
+.rz-m-b-80{
+    margin-bottom: var(--rz-clamp24-80);
+}
+
+.rz-text-c {
+    text-align: center;
+}
+
+.rz-text-r {
+    text-align: right;
+}
+
+.rz-f-b {
+    font-weight: bold;
+}
+
+.rz-upper {
+    text-transform: uppercase;
+}
+
+.rz-m-auto {
+    margin: 0 auto;
+}
+
+.rz-d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.rz-d-flex-rev {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.rz-d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.rz-h2 {
+    font-size: var(--rz-clamp24-48);
+}
+
+.rz-h3 {
+    font-size: var(--rz-clamp16-32);
+}
+
+.rz-h4 {
+    font-size: var(--rz-clamp16-24);
+}
+
+
+.rz-padding {
+    padding: var(--rz-clamp16-56);
+}
+
+.rz-a-content {
+    background: url("https://content1.rozetka.com.ua/files/images/original/490889988.png") no-repeat bottom/cover;
+    min-height: clamp(840px, 80vw, 1040px);
+    padding: 80px 0 0 56px;
+    position: relative;
+    z-index: 1;
+}
+
+.rz-a-main {
+    padding-top: var(--rz-clamp16-48);
+    width: 440px;
+    font-size: clamp(14px,1.3vw, 20px);
+}
+
+.rz-month-img {
+    margin-right: -144px;
+}
+
+.rz-month-img img {
+    width: clamp(360px, 28vw, 400px);
+}
+
+.rz-a-bear-img {
+    width: 60%;
+    margin-top: -40px;
+    margin-right: -120px;
+    flex-shrink: 0;
+}
+
+.rz-logo-img img {
+    width: clamp(80px, 12vw, 160px);
+}
+
+.rz-b-content {
+    padding: 0 var(--rz-clamp16-56);
+}
+
+.rz-compari-block {
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: -400px;
+}
+
+.rz-ours-wrap {
+    background: url("https://content1.rozetka.com.ua/files/images/original/490924360.png") no-repeat center/contain;
+    min-height: clamp(400px, 54vw, 720px);
+    width: clamp(304px, 53vw, 800px); 
+    position: relative;
+    z-index: 2;
+}
+
+.rz-ours {
+    gap: var(--rz-clamp16-40);
+    align-items: center;
+    padding: 60px;
+    min-height: inherit;
+}
+
+.rz-ours-img {
+    width: clamp(160px, 20vw, 320px);
+}
+
+.rz-ours-text {
+    width: clamp(200px, 24vw, 320px);
+    padding-left: var(--rz-clamp16-56);
+}
+
+.rz-ours-list {
+    counter-reset: list-counter;
+}
+
+.rz-ours-li, .rz-others-li {
+    position: relative;
+    margin-bottom: var(--rz-clamp8-16);
+    font-size: clamp(14px, 1.5vw, 24px);
+}
+
+.rz-ours-li {
+    counter-increment: list-counter;
+}
+
+.rz-ours-li:last-child {
+    margin-bottom: 0;
+}
+
+.rz-ours-li::before {
+    content: counter(list-counter) "";
+    position: absolute;
+    left: -48px;
+    top: -1px;
+    font-weight: 700;
+    background: linear-gradient(200deg, rgba(151,174,255,1) 0%, rgba(203,167,255,1) 20%, rgba(222,165,255,1) 30%, rgba(243,162,255,1) 45%, rgba(255,160,255,1) 50%, rgba(255,160,247,1) 55%, rgba(252,164,185,1) 100%);
+    border-radius: 50%;
+    color: var(--rz-white);
+    width: var(--rz-clamp24-32);
+    height: var(--rz-clamp24-32);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--rz-white);
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(12px, 1vw, 16px);
+}
+
+
+.rz-others-wrap {
+    background: url("https://content1.rozetka.com.ua/files/images/original/490946733.png") no-repeat center/contain;
+    min-height: clamp(400px, 48vw, 640px);
+    width: clamp(304px, 48vw, 640px); 
+    position: relative;
+    z-index: 1;
+    margin-left: -80px;
+    margin-bottom: -24px;
+}
+
+.rz-others {
+    gap: var(--rz-clamp16-40);
+    align-items: center;
+    padding: 60px;
+    min-height: inherit;
+    color: var(--rz-white);
+}
+
+.rz-others-img {
+    position: absolute;
+    bottom: 24px;
+    right: -40px;
+    width: clamp(104px, 14vw, 200px);
+}
+
+.rz-others-text {
+    width: 100%;
+    padding-left: var(--rz-clamp16-56);
+}
+
+.rz-others-list {
+    width: 75%;
+}
+
+.rz-others-li::before {
+    content: "";
+    position: absolute;
+    left: -48px;
+    top: -1px;
+    background: url("https://content2.rozetka.com.ua/files/images/original/490946734.png") no-repeat center/contain;
+    width: var(--rz-clamp24-32);
+    height: var(--rz-clamp24-32);
+    opacity: 0.5;
+}
+
+
+.rz-c-content {
+    padding-top: 16px;
+}
+
+.rz-benefits-list {
+    justify-content: space-between;
+    gap: var(--rz-clamp16-24);
+}
+
+.rz-benefits-li {
+    min-height: 160px;
+    padding: 24px 24px var(--rz-clamp24-40) var(--rz-clamp24-40);
+    width: 25%;
+    font-size: var(--rz-clamp16-24);
+    position: relative;
+    z-index: 1;
+
+    background: var(--rz-grad);
+    background-size: 1000px;
+    border-radius: 40px;
+}
+
+.rz-plus-icon {
+    position: absolute;
+    bottom: -24px;
+    left: 48px;
+    width: 48px;
+    height: 48px;
+    z-index: 2;
+}
+
+.rz-plus-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--rz-grad);
+    background-size: 1000px;
+    border-radius: 50%;
+    top: 2px;
+    right: 2px;
+    width: 44px;
+    height: 44px;
+    z-index: -1;
+}
+
+
+.rz-benefits-li:nth-child(1), .rz-benefits-li:nth-child(1) .rz-plus-icon::after{
+    background-position: 0;
+}
+
+.rz-benefits-li:nth-child(2), .rz-benefits-li:nth-child(2) .rz-plus-icon::after {
+    background-position: 35%;
+}
+
+.rz-benefits-li:nth-child(3), .rz-benefits-li:nth-child(3) .rz-plus-icon::after {
+    background-position: 70%;
+}
+
+.rz-benefits-li:nth-child(4), .rz-benefits-li:nth-child(4) .rz-plus-icon::after {
+    background-position: 100%;
+}
+
+
+.rz-benefits-icon {
+    position: absolute;
+    z-index: -3;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 104px;
+    opacity: 0.5;
+}
+
+.rz-benefits-text {
+    text-wrap: balance;
+}
+
+.rz-benefits-title {
+    font-size: var(--rz-clamp16-32);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.rz-d-content {
+    background: url("https://content2.rozetka.com.ua/files/images/original/490995143.png") no-repeat center/cover;
+    min-height: clamp(600px, 64vw, 880px);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    margin-bottom: 80px;
+}
+
+.rz-d-block {
+    width: clamp(400px, 40vw, 560px);
+}
+
+.rz-d-img2 {
+    width: clamp(480px, 72vw, 960px);
+    margin-left: -120px;
+    position: relative;
+}
+
+.rz-d-abs-text1 {
+    position: absolute;
+    top: 3%;
+    right: 26%;
+    width: clamp(80px, 12vw, 160px);
+    color: var(--rz-white);
+    font-size: clamp(14px, 1.5vw, 24px);
+}
+
+.rz-d-img1 {
+    margin-bottom: -120px;
+}
+
+.rz-e-content {
+    background: url("https://content1.rozetka.com.ua/files/images/original/491039530.png") no-repeat left/contain;
+    min-height: 800px;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: var(--rz-clamp16-24);
+}
+
+
+/* slider start */
+
+#rz-slider {
+   width: 960px;
+   align-items: center;
+   justify-content: flex-end;
+   position: relative;
+}
+
+#rz-slider input[type='radio'] {
+    display: none;
+}
+
+#rz-slider label {
+    cursor: pointer;
+}
+
+#rz-bullets {
+    gap: 16px;
+}
+
+.rz-btn-wrap {
+    display: flex;
+    align-items: center;
+    gap: var(--rz-clamp8-16);
+}
+
+.rz-btn {
+    font-size: var(--rz-clamp16-24);
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    border: 2px solid var(--rz-white);
+    border-radius: 15px;
+    padding: 12px;
+    line-height: 1;
+    width: 160px;
+    text-align: center;
+}
+
+.rz-bullets-arrow {
+    width: 40px;
+}
+
+
+.rz-slider-left {
+    background: url("https://content1.rozetka.com.ua/files/images/original/491017591.png") no-repeat center/contain;
+    min-height: 400px;
+    width: 400px; 
+    position: relative;
+    z-index: 1;
+}
+
+.rz-slider-right {
+    background: url("https://content.rozetka.com.ua/files/images/original/491017592.png") no-repeat center/contain;
+    min-height: 520px;
+    width: 560px; 
+    position: relative;
+    z-index: 2;
+    margin-left: -120px;
+}
+
+
+.rz-slider-inner {
+    padding: 80px;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rz-slider-left .rz-slider-inner {
+    padding-left: 40px;
+}
+
+
+.rz-slide-img img {
+    width: clamp(280px, 20vw, 320px);
+    margin-bottom: 16px;
+}
+
+.rz-slide-p {
+    font-size: clamp(10px, 1.5vw, 18px);
+    max-height: 136px;
+    overflow-y: auto;
+}
+
+.rz-slide, .rz-bullets-arrow img {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+.rz-slide {
+    position: absolute;
+}
+
+
+#rz-slider:has(#rz-slide1:checked) .rz-btn-wrap:nth-child(1) .rz-bullets-arrow img,
+#rz-slider:has(#rz-slide2:checked) .rz-btn-wrap:nth-child(2) .rz-bullets-arrow img,
+#rz-slider:has(#rz-slide3:checked) .rz-btn-wrap:nth-child(3) .rz-bullets-arrow img,
+#rz-slider:has(#rz-slide4:checked) .rz-btn-wrap:nth-child(4) .rz-bullets-arrow img {
+    opacity: 1;
+    visibility: visible;
+}
+
+#rz-slider:has(#rz-slide1:checked) .rz-slide:nth-child(1),
+#rz-slider:has(#rz-slide2:checked) .rz-slide:nth-child(2),
+#rz-slider:has(#rz-slide3:checked) .rz-slide:nth-child(3),
+#rz-slider:has(#rz-slide4:checked) .rz-slide:nth-child(4) {
+    opacity: 1;
+    visibility: visible;
+    position: static;
+}
+
+    
+/* slider end */
+
+.rz-f-content {
+    align-items: end;
+    padding: var(--rz-clamp16-24) 0 var(--rz-clamp16-56) 0;
+}
+
+.rz-e-block {
+    width: 70%;
+}
+
+.rz-f-img1 {
+    position: relative;
+}
+
+.rz-f-abs-text1 {
+    position: absolute;
+    top: 16%;
+    right: 32%;
+    width: clamp(144px, 19vw, 288px);
+    font-size: clamp(14px, 1.5vw, 20px);
+}
+
+.rz-g-content {
+    justify-content: center;
+    align-items: center;
+    gap: var(--rz-clamp16-40);
+}
+
+.rz-g-img1, .rz-g-block {
+    width: 50%;
+}
+
+
+.rz-g-block {
+    padding-left: 0;
+}
+
+.rz-g-img1 {
+    margin-top: -120px;
+    position: relative;
+    z-index: 1;
+}
+
+.rz-decor-block {
+    background: url("https://content.rozetka.com.ua/files/images/original/491095597.png") no-repeat center/cover;
+    border-radius: 30px;
+    padding: var(--rz-clamp16-40);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: clamp(14px, 1.5vw, 18px);
+    width: min(100%, 560px);
+    margin: 0 auto;
+}
+
+.rz-h-block {
+    background: url("https://content.rozetka.com.ua/files/images/original/491144183.png") no-repeat top/cover;
+    min-height: clamp(400px, 44vw, 640px);
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.rz-remark {
+    font-style: italic;
+}
+
+.rz-lt-decor-block {
+    background: url("https://content.rozetka.com.ua/files/images/original/491107756.png") no-repeat center/cover;
+    border-radius: 30px;
+    padding: var(--rz-clamp16-40);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+}
+
+.rz-size-block {
+    flex-shrink: 0;
+    width: min(100%, 320px);
+    margin-top: 6%;
+}
+
+.rz-h-img1, .rz-h-img2 {
+    width: clamp(320px, 64vw, 800px);
+}
+
+.rz-h-img1 {
+    margin-top: -24px;
+}
+
+.rz-h-img2 {
+    margin-top: -104px;
+    margin-left: -88px;
+}
+
+.rz-abs-h-decor1 {
+    position: absolute;
+    align-items: center;
+    gap: var(--rz-clamp8-16);
+    bottom: 8%;
+    left: 24%;
+    font-size: 14px;
+    padding: 16px;
+    border-radius: 20px;
+    width: min(100%, 280px);
+}
+
+.rz-abs-h-img1 {
+    flex-shrink: 0;
+}
+
+.rz-abs-h-img1 img {
+    width: clamp(32px, 4vw, 48px);
+}
+
+@media(max-width:1023px) {
+
+    .rz-a-content, .rz-b-content {
+        padding: var(--rz-clamp16-24);
+    }
+
+    .rz-a-block, .rz-benefits-list {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rz-a-bear-img {
+        margin: unset;
+        margin-right: -80px;
+        width: 100%;
+    }
+
+    .rz-a-main {
+        margin-bottom: 24px;
+    }
+
+    .rz-month-img img {
+        width: clamp(216px, 22vw, 360px);
+    }
+
+    .rz-month-img {
+        margin-right: -64px;
+    }
+
+    .rz-compari-block {
+        margin-top: -112px;
+    }
+
+    .rz-compari-block, .rz-d-content, .rz-g-content, .rz-h-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rz-ours-wrap {
+        width: 520px;
+        min-height: 480px;
+    }
+
+    .rz-others-wrap {
+        width: 416px;
+        margin: unset;
+        margin-top: -176px;
+        background-position: bottom;
+    }
+
+    .rz-others {
+        padding: 160px 54px 54px 54px;
+    }
+
+    .rz-others-img {
+        width: 120px;
+    }
+
+    .rz-ours {
+        justify-content: space-between;
+    }
+
+    .rz-others-li::before {
+        width: 24px;
+        height: 24px;
+    }
+
+    .rz-compari-block .rz-h2 {
+        font-size: 20px;
+    }
+
+    .rz-ours-li, .rz-others-li {
+        font-size: 14px;
+    }
+
+    .rz-benefits-list {
+        gap: 32px;
+    }
+
+    .rz-benefits-li {
+        width: 45%;
+    }
+
+    .rz-d-content {
+        min-height: unset;
+        text-align: center;
+        padding: var(--rz-clamp16-24);
+        background-size: 100% 760px;
+        margin-bottom: unset;
+    }
+
+    .rz-d-img2 {
+        margin: unset;
+    }
+
+    .rz-d-img1 {
+        margin-bottom: 24px;
+    }
+
+    .rz-d-img1 {
+        display: none;
+    }
+    
+    .rz-d-img3 {
+        display: block;
+        width: min(100%, 400px);
+    }
+
+    #rz-slider {
+        width: 100%;
+    }
+
+    .rz-btn {
+        width: clamp(112px, 12vw, 160px);
+    }
+
+    .rz-e-mobil {
+        display: block;
+    }
+
+    .rz-e-content {
+        background: none;
+        min-height: unset;
+        align-items: center;
+        justify-content: start;
+        padding-bottom: var(--rz-clamp16-24);
+    }
+
+    .rz-e-block {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    
+    .rz-f-abs-text1 {
+        text-align: center;
+        position: static;
+        width: 80%;
+        padding: 0 16px;
+        margin: 0 auto 24px auto;
+    }
+    
+
+    .rz-g-block {
+        padding: var(--rz-clamp16-24);
+        order: -1;
+    }
+
+    .rz-g-content > div {
+        width: 100%;
+    }
+    
+    .rz-g-img1 {
+        margin: unset;
+    }
+
+    .rz-size-block  {
+        order: 1;
+        margin-top: 12%;
+    }
+
+    .rz-h-img2 {
+        order: 2;
+    }
+
+    .rz-abs-h-decor1 {
+        position: static;
+        order: 3;
+    }
+
+    .rz-h-img1 {
+        order: 4;
+    }
+
+    .rz-h-img2 {
+        margin-top: -16px;
+        margin-left: 0;
+    }
+
+    .rz-h-img1 {
+        margin-top: -12px;
+    }
+
+    .rz-h-main {
+        margin-bottom: -24px;
+    }
+
+    .rz-h-block {
+        background-size: 100% 100%;
+    }
+}
+
+@media(max-width:767px) {
+
+
+    .rz-month-img {
+        position: absolute;
+        top: 32%;
+        left: 4%;
+        z-index: -1;
+    }
+
+    .rz-month-img img {
+        width: 120px;
+    }
+
+    .rz-a-content {
+        min-height: unset;
+    }
+
+    .rz-ours-wrap, .rz-others-wrap {
+        min-height: unset;
+        width: 320px;
+    }
+
+    .rz-ours {
+        padding: 32px;
+    }
+
+    .rz-ours-text, .rz-others-text {
+        width: 200px;
+        padding-left: 24px;
+    }
+
+    .rz-ours-li, .rz-others-li {
+        font-size: 11px;
+        margin-bottom: 8px;
+    }
+
+    .rz-ours-li::before {
+        left: -24px;
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+    }
+
+    .rz-compari-block .rz-h2 {
+        font-size: 16px;
+    }
+
+    .rz-ours-img {
+        width: 120px;
+    }
+
+    .rz-others-li::before {
+        width: 16px;
+        height: 16px;
+    }
+
+    .rz-others {
+        padding: 64px 56px 40px 56px;
+    }
+
+    .rz-others-wrap {
+        margin-top: -72px;
+    }
+
+    .rz-others-img {
+        bottom: 0;
+        right: 0;
+    }
+
+    .rz-benefits-li, .rz-d-block {
+        width: 100%;
+    }
+
+    .rz-d-content, .rz-h-block {
+        background-size: cover;
+        background: var(--rz-grad);
+        padding: 24px 16px;
+    }
+
+    .rz-d-img2  {
+        width: min(100%, 320px);
+        margin: 0 auto;
+    }
+
+    .rz-d-abs-text1 {
+        top: 0;
+        right: 0;
+        width: 120px;
+    }
+
+    .rz-benefits-li {
+        min-height: 120px;
+        border-radius: 20px;
+    }
+
+    #rz-slider {
+        flex-direction: column;
+    }
+
+    .rz-slider-right {
+        margin: unset;
+        min-height: unset;
+        width: 320px;
+        min-height: 320px;
+        margin-top: -64px;
+    }
+
+    .rz-slider-left {
+        width: 280px;
+        min-height: unset;
+    }
+
+    .rz-btn {
+        font-size: 12px;
+        padding: 4px;
+        width: 96px;
+    }
+
+    #rz-bullets {
+        gap: 8px;
+    }
+
+    .rz-slider-left {
+        background-image: url("https://content1.rozetka.com.ua/files/images/original/491152278.png");
+    }
+
+    .rz-slider-inner, .rz-slider-left .rz-slider-inner {
+        padding: 64px;
+    }
+
+    .rz-slider-left .rz-slider-inner {
+        padding-top: 24px;
+    }
+    
+    .rz-bullets-arrow {
+        width: 16px;
+    }
+
+    .rz-slide-p {
+        max-height: 56px;
+    }
+
+    .rz-h-main {
+        margin-bottom: 24px;
+    }
+
+    .rz-size-block {
+        width: 240px;
+        margin: unset;
+    }
+}
