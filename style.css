@@ -444,6 +444,7 @@
     line-height: 1;
     width: 160px;
     text-align: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .rz-bullets-arrow {
